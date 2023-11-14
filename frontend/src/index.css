@@ -1,0 +1,104 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/*  */
+nav {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 0; /* Padding for content */
+  text-align: center; /* Center-align text */
+}
+
+/* Navbar Logo */
+.nav12 {
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Font weight */
+  letter-spacing: 2px; /* Letter spacing */
+  text-transform: uppercase; /* Uppercase text */
+  animation: slideIn 1s ease; /* Slide-in animation */
+  margin: 10px auto; /* Center-align horizontally and add top margin */
+  max-width: 80%; /* Limit width for responsiveness */
+}
+
+/* Keyframes for Slide-in Animation */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100px); /* Start position off-screen from the top */
+    opacity: 0; /* Hidden initially */
+  }
+  100% {
+    transform: translateY(0); /* End position, fully visible */
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* CSS for Grid Component */
+
+
+
+.button {
+  color: rgb(67, 1, 128);
+  font-size: 60px;
+  height: 65px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 2rem;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for Grid Component */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  grid-gap: 20px;
+  justify-content: center; /* Center-align items horizontally */
+}
+
+.grid__item {
+  width: 100%; /* Ensure each item takes up the full width of its container */
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.5s;
+  margin: 20px 10px 0; /* Margin added from the top, left, and right */
+}
+
+.grid__item img {
+  max-width: 80%; /* Reduce the size of the image to 80% */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center-align the image horizontally within each item */
+}
+
+.grid__item.flip-image {
+  transform: rotateY(180deg); /* Rotate the entire item, not just the image */
+}
+
+/* Prevent backface-visibility for image, so it won't disappear during the flip */
+.grid__item.flip-image img {
+  backface-visibility: hidden;
+}
